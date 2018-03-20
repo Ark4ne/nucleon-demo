@@ -34,7 +34,6 @@ return [
                 'password' => DB_PWD,
                 'dbname'   => DB_NAME,
                 'port'     => DB_PORT,
-                'charset'  => 'utf8',
             ]
         ]
     ],
