@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         verbose="true"
+         colors="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true">
+  <testsuite name="Nucleon - Testsuite">
+    <directory>./tests/</directory>
+  </testsuite>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="false">
+      <directory suffix=".php">./app</directory>
+    </whitelist>
+  </filter>
+  <php>
+    <env name="APP_ENV" value="test"/>
+  </php>
+</phpunit>

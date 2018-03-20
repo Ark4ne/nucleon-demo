@@ -1,0 +1,7 @@
+/.idea
+/.sass-cache
+/vendor
+composer.phar
+.php_cs.cache
+.DS_Store
+Thumbs.db
