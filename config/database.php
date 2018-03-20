@@ -24,15 +24,16 @@ return [
      | \Phalcon\Db\Adapter\Pdo\Oracle
      | \Phalcon\Db\Adapter\Mongo\Db
      */
-    'default'     => 'mysql',
+    'default'     => 'postgresql',
     'connections' => [
-        'mysql' => [
-            'adapter' => \Phalcon\Db\Adapter\Pdo\Mysql::class,
+        'postgresql' => [
+            'adapter' => \Phalcon\Db\Adapter\Pdo\Postgresql::class,
             'config'  => [
                 'host'     => DB_HOST,
                 'username' => DB_USER,
-                'password' => DB_PASSWORD,
+                'password' => DB_PWD,
                 'dbname'   => DB_NAME,
+                'port'     => DB_PORT,
                 'charset'  => 'utf8',
             ]
         ]
