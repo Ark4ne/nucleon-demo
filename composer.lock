@@ -113,16 +113,16 @@
         },
         {
             "name": "nucleon/framework",
-            "version": "v1.2.1",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon-nucleon/framework.git",
-                "reference": "908a72af421986ad4fc6d564612752fee733ecf6"
+                "reference": "319983fa450f37c4a9cbd0b9caba8d3f1b922021"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/908a72af421986ad4fc6d564612752fee733ecf6",
-                "reference": "908a72af421986ad4fc6d564612752fee733ecf6",
+                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/319983fa450f37c4a9cbd0b9caba8d3f1b922021",
+                "reference": "319983fa450f37c4a9cbd0b9caba8d3f1b922021",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 "nucleon",
                 "phalcon"
             ],
-            "time": "2018-03-19T21:58:00+00:00"
+            "time": "2018-03-20T14:50:37+00:00"
         }
     ],
     "packages-dev": [
