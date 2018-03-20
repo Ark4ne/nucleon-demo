@@ -1,5 +1,14 @@
 <?php
 
+$parts = parse_url(DB_URL);
+
+$infos = [
+  'host' => $parts['host'],
+  'user' => $parts['user'],
+  'pass' => $parts['pass'],
+  'port' => $parts['port'],
+  'dbname' => substr($parts['path'], 1),
+];
 /*
  +-------------------------------------------------------------------
  | Database configuration
@@ -29,11 +38,11 @@ return [
         'postgresql' => [
             'adapter' => \Phalcon\Db\Adapter\Pdo\Postgresql::class,
             'config'  => [
-                'host'     => DB_HOST,
-                'username' => DB_USER,
-                'password' => DB_PWD,
-                'dbname'   => DB_NAME,
-                'port'     => DB_PORT,
+                'host'     => $infos['host'],
+                'username' => $infos['user'],
+                'password' => $infos['pass'],
+                'dbname'   => $infos['dbname'],
+                'port'     => $infos['port'],
             ]
         ]
     ],
