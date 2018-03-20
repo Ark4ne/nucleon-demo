@@ -39,7 +39,8 @@
     ],
     "post-update-cmd": [
       "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled",
-      "php quark optimize --memory"
+      "php quark optimize --memory",
+      "php quark migrate --force"
     ]
   }
 }
