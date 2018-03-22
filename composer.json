@@ -42,6 +42,7 @@
       "php quark optimize --memory"
     ],
     "warmup": [
+      "php quark optimize --memory --force",
       "php quark migrate --force"
     ]
   }
