@@ -4,62 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a991f32515e79f672644e289cd6594d6",
+    "content-hash": "8d3efa28cc6bde6375c626d2c91eaabf",
     "packages": [
-        {
-            "name": "classpreloader/classpreloader",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ClassPreloader/ClassPreloader.git",
-                "reference": "4729e438e0ada350f91148e7d4bb9809342575ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ClassPreloader/ClassPreloader/zipball/4729e438e0ada350f91148e7d4bb9809342575ff",
-                "reference": "4729e438e0ada350f91148e7d4bb9809342575ff",
-                "shasum": ""
-            },
-            "require": {
-                "nikic/php-parser": "^1.0|^2.0|^3.0",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ClassPreloader\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com"
-                },
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Helps class loading performance by generating a single PHP file containing all of the autoloaded files for a specific use case",
-            "keywords": [
-                "autoload",
-                "class",
-                "preload"
-            ],
-            "time": "2017-12-10 11:40:39"
-        },
         {
             "name": "nikic/php-parser",
             "version": "3.x-dev",
@@ -113,21 +59,21 @@
         },
         {
             "name": "nucleon/framework",
-            "version": "1.2.x-dev",
+            "version": "1.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon-nucleon/framework.git",
-                "reference": "33945f56854d81abff40d3830c75c1deaa49341b"
+                "reference": "c6859719ddbc2fe45bb77bb3be148b9ef1193e72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/33945f56854d81abff40d3830c75c1deaa49341b",
-                "reference": "33945f56854d81abff40d3830c75c1deaa49341b",
+                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/c6859719ddbc2fe45bb77bb3be148b9ef1193e72",
+                "reference": "c6859719ddbc2fe45bb77bb3be148b9ef1193e72",
                 "shasum": ""
             },
             "require": {
-                "classpreloader/classpreloader": "~3.0",
                 "ext-phalcon": ">=3.0",
+                "nikic/php-parser": "^3.0",
                 "php": ">=5.6"
             },
             "replace": {
@@ -162,7 +108,7 @@
                 "nucleon",
                 "phalcon"
             ],
-            "time": "2018-03-22 00:44:09"
+            "time": "2018-03-23 14:29:45"
         }
     ],
     "packages-dev": [
