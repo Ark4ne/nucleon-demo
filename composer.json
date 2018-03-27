@@ -16,10 +16,11 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.2",
     "ext-phalcon": ">=3.0",
     "ext-mbstring": "*",
     "ext-openssl": "*",
+    "ext-zend-opcache": "*",
     "nucleon/framework": "~1.3"
   },
   "require-dev": {
