@@ -36,9 +36,12 @@ class DebugController extends ControllerBase
         $toDump['float'] = mt_rand(10000, 1000000) / 100;
         $toDump['str'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
         $toDump['arr'] = [123, 'abc', 'foo' => 'bar', 'recursion' => &$toDump];
-        $toDump['obj'] = (object)[
-          'foo' => 'bar',
-        ];
+        $toDump['obj'] = new class extends \stdClass
+        {
+            public $pub = 'abc';
+            protected $pro = 123;
+            private $pri = 456;
+        };
         $this->view->setVar('to_dump', $toDump);
         $this->view->render('example/debug', 'var-dump');
     }
