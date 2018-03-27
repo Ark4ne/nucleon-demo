@@ -1,4 +1,4 @@
-<footer>
+<footer class="page-footer">
   <span>
     {{ ((microtime(true) - _SERVER['REQUEST_TIME_FLOAT']) * 1000) | round(3) }} ms
   </span>

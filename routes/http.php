@@ -33,11 +33,6 @@ $router->addGet('/', [
     'action'     => 'index'
 ]);
 
-$router->addGet('/exception-test', [
-    'controller' => 'errors',
-    'action'     => 'throwException'
-]);
-
 /*
 |--------------------------------------------------------------------------
 | Front Routes
@@ -84,6 +79,36 @@ $frontend->addGet('/logout', [
 
 $router->mount($frontend);
 
+/*
+|--------------------------------------------------------------------------
+| Example Routes
+|--------------------------------------------------------------------------
+*/
+$example = new \Phalcon\Mvc\Router\Group([
+  'namespace' => 'App\Kernels\Http\Modules\Example\Controllers',
+  'module'     => 'Example'
+]);
+$example->addGet('/example/api/index', [
+  'controller' => 'Api',
+  'action'     => 'index'
+]);
+
+$example->addGet('/example/debug/exception', [
+  'controller' => 'debug',
+  'action'     => 'exception'
+]);
+
+$example->addGet('/example/debug/throw-exception', [
+  'controller' => 'debug',
+  'action'     => 'throwException'
+]);
+
+$example->addGet('/example/debug/var-dump', [
+  'controller' => 'debug',
+  'action'     => 'varDump'
+]);
+
+$router->mount($example);
 /*
 |--------------------------------------------------------------------------
 | Back Routes

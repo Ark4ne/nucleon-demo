@@ -1,66 +1,55 @@
 @import "variables";
-
-@import "../components/materialize/materialize";
-
+@import "materialize/materialize";
 @import "flash";
+@import "sidenav";
 
-body {
+body{
   background-color: $body-bg-color;
   color: $body-font-color;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   min-height: 100vh;
   margin: 0;
+}
 
-  nav, header {
-    box-shadow: none;
-
-    height: $navbar-height;
-    line-height: $navbar-height;
-
-    text-align: right;
-
-    a {
-      padding: 0 25px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .1rem;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+header, main, footer {
+  padding-left: 300px;
+}
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0;
   }
+}
 
-  footer {
-    @extend .page-footer;
+nav, header {
+  box-shadow: none;
+  height: $navbar-height;
+  line-height: $navbar-height;
+  text-align: right;
 
-    height: $footer-height;
-    line-height: $footer-height;
-
-    padding: 0;
-
-    text-align: right;
-
-    span {
-      padding: 0 25px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .1rem;
-    }
+  a {
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
   }
-
+}
+main {
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+  display: flex;
+  flex-shrink: 0;
   .page-content {
-    min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
-    display: flex;
-    flex-shrink: 0;
-
-    &.h-center {
+    flex: 1 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    &.flex-center{
       justify-content: center;
-    }
-    &.v-center {
       align-items: center;
+      display: flex;
     }
-
-    .logo{
+    .logo {
       display: block;
       margin: auto;
       max-width: 96px;
@@ -72,5 +61,19 @@ body {
       font-size: 84px;
       margin-bottom: 30px;
     }
+  }
+}
+
+footer {
+  @extend .page-footer;
+  height: $footer-height;
+  line-height: $footer-height;
+  text-align: right;
+  padding-top: 0 !important;
+  span {
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
   }
 }

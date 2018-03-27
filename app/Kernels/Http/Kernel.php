@@ -5,6 +5,7 @@ namespace App\Kernels\Http;
 use App\Core\Providers\Example as ExampleProvider;
 use App\Kernels\Http\Modules\Backend\Module as BackendModule;
 use App\Kernels\Http\Modules\Frontend\Module as FrontendModule;
+use App\Kernels\Http\Modules\Example\Module as ExampleModule;
 use Neutrino\Foundation\Http\Kernel as HttpKernel;
 use Neutrino\Providers\Auth as AuthProvider;
 use Neutrino\Providers\Cache as CacheProvider;
@@ -92,9 +93,13 @@ class Kernel extends HttpKernel
             'className' => FrontendModule::class,
             'path'      => BASE_PATH . '/app/Kernels/Http/Modules/Frontend/Module.php'
         ],
-        'Backend' => [
-            'className' => BackendModule::class,
-            'path'      => BASE_PATH . '/app/Kernels/Http/Modules/Backend/Module.php'
-        ]
+      'Backend' => [
+        'className' => BackendModule::class,
+        'path'      => BASE_PATH . '/app/Kernels/Http/Modules/Backend/Module.php'
+      ],
+      'Example' => [
+        'className' => ExampleModule::class,
+        'path'      => BASE_PATH . '/app/Kernels/Http/Modules/Example/Module.php'
+      ]
     ];
 }

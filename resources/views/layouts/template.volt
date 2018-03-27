@@ -25,18 +25,22 @@
   {% include 'partials/header.volt' %}
 {% endblock %}
 
+<main>
 {% block body %}{% endblock %}
+</main>
 
 {% block footer %}
   {% include 'partials/footer.volt' %}
 {% endblock %}
 
 {# Import library js #}
-{% do assets.collection('common.js').addJs('https://code.jquery.com/jquery-3.3.1.min.js') %}
-{% do assets.collection('common.js').addJs('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') %}
+{% do assets.collection('common.js').addJs('//code.jquery.com/jquery-3.3.1.min.js') %}
+{% do assets.collection('common.js').addJs('//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js') %}
 {# Output library js #}
 {% do assets.outputJs('common.js') %}
 
+{# Add app.js #}
+{% do assets.addJs('js/app.js') %}
 {# Block for specific js #}
 {% block javascripts %}{% endblock %}
 {# Output other js #}

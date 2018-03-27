@@ -1,0 +1,1 @@
+(function(f,a,b,e){b(a).ready(function(){e.AutoInit()})})(window,document,jQuery,M);

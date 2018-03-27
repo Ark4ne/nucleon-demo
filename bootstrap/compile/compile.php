@@ -1949,7 +1949,7 @@ class Kernel extends \Neutrino\Foundation\Http\Kernel
     protected $providers = [\Neutrino\Providers\Logger::class, \Neutrino\Providers\Url::class, \Neutrino\Providers\Flash::class, \Neutrino\Providers\Session::class, \Neutrino\Providers\Http\Router::class, \Neutrino\Providers\View::class, \Neutrino\Providers\Http\Dispatcher::class, \Neutrino\Providers\Database::class, \Neutrino\Providers\Cache::class, \Neutrino\Providers\Auth::class, \App\Core\Providers\Example::class];
     protected $middlewares = [];
     protected $listeners = [];
-    protected $modules = ['Frontend' => ['className' => \App\Kernels\Http\Modules\Frontend\Module::class, 'path' => BASE_PATH . '/app/Kernels/Http/Modules/Frontend/Module.php'], 'Backend' => ['className' => \App\Kernels\Http\Modules\Backend\Module::class, 'path' => BASE_PATH . '/app/Kernels/Http/Modules/Backend/Module.php']];
+    protected $modules = ['Frontend' => ['className' => \App\Kernels\Http\Modules\Frontend\Module::class, 'path' => BASE_PATH . '/app/Kernels/Http/Modules/Frontend/Module.php'], 'Backend' => ['className' => \App\Kernels\Http\Modules\Backend\Module::class, 'path' => BASE_PATH . '/app/Kernels/Http/Modules/Backend/Module.php'], 'Example' => ['className' => \App\Kernels\Http\Modules\Example\Module::class, 'path' => BASE_PATH . '/app/Kernels/Http/Modules/Example/Module.php']];
 }
 namespace App\Kernels\Http\Controllers;
 
@@ -1990,7 +1990,7 @@ class MicroController extends \Phalcon\Mvc\Controller
     public function indexAction()
     {
         $this->response->setStatusCode(200);
-        $this->response->setJsonContent(['action' => 'index']);
+        $this->response->setJsonContent(['controller' => __CLASS__, 'action' => __FUNCTION__]);
         return $this->response;
     }
 }

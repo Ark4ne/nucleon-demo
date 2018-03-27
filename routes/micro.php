@@ -49,9 +49,13 @@ $router->addGet('/api/test', function () {
 });
 
 $router->addGet('/api/index', [
-    'controller' => \App\Kernels\Micro\Controllers\MicroController::class,
-    'action' => 'indexAction'
+  'controller' => \App\Kernels\Micro\Controllers\MicroController::class,
+  'action' => 'indexAction'
 ]);
+
+$router->addGet('/api/exception', function () {
+    throw new Exception();
+});
 
 /*
 |--------------------------------------------------------------------------

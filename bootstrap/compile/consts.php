@@ -8,4 +8,4 @@ define('DB_USER', getenv('DATABASE_USER'));
 define('DB_PWD', getenv('DATABASE_PASS'));
 define('DB_NAME', getenv('DATABASE_DBNAME'));
 define('DB_PORT', getenv('DATABASE_PORT'));
-define('SESSION_ID', 'nucleon-session-id');
+define('SESSION_ID', 'heroku-session-id');

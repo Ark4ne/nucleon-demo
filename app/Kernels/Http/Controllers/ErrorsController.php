@@ -22,19 +22,4 @@ class ErrorsController extends ControllerBase
 
         return $this->view->render('errors', 'http404');
     }
-
-    public function throwExceptionAction()
-    {
-        $this->flash->success('success');
-
-        trigger_error('notice', E_USER_NOTICE);
-
-        trigger_error('warning', E_USER_WARNING);
-
-        try {
-            throw new \Exception('A catched exception');
-        } catch (\Exception $e) {
-            throw new \Phalcon\Exception('An uncaught exception', $e->getCode(), $e);
-        }
-    }
 }

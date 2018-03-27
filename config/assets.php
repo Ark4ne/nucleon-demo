@@ -72,7 +72,7 @@ return [
              */
             'externs_url' => [
                 'http://code.jquery.com/jquery-3.3.1.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js',
             ]
         ],
         /*
@@ -122,8 +122,8 @@ return [
             \Neutrino\Assets\Closure\GlobalClosurePrecompilation::class => [
                 'window' => 'window',
                 'document' => 'document',
-                'jQuery' => 'jQuery',
-                'Materialize' => 'Materialize',
+                'jQuery' => '$',
+                'M' => 'M',
             ]
         ],
         /*
