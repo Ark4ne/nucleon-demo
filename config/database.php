@@ -36,7 +36,7 @@ return [
     'default'     => 'postgresql',
     'connections' => [
         'postgresql' => [
-            'adapter' => \Phalcon\Db\Adapter\Pdo\Postgresql::class,
+            'adapter' => DB_DRIVER,
             'config'  => [
                 'host'     => $infos['host'],
                 'username' => $infos['user'],

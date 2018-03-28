@@ -35,15 +35,12 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled",
-      "php quark optimize --memory"
+      "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled"
     ],
     "post-update-cmd": [
-      "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled",
-      "php quark optimize --memory"
+      "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled"
     ],
     "warmup": [
-      "php quark optimize --memory --force",
       "php quark migrate --force"
     ]
   }

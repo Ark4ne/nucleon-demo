@@ -156,6 +156,7 @@ $loader->registerClasses(array (
   'Neutrino\\Foundation\\Cli\\Tasks\\HelperTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/HelperTask.php',
   'Neutrino\\Foundation\\Cli\\Tasks\\ListTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/ListTask.php',
   'Neutrino\\Foundation\\Cli\\Tasks\\OptimizeTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/OptimizeTask.php',
+  'Neutrino\\Foundation\\Cli\\Tasks\\RouteCacheTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/RouteCacheTask.php',
   'Neutrino\\Foundation\\Cli\\Tasks\\RouteListTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/RouteListTask.php',
   'Neutrino\\Foundation\\Cli\\Tasks\\ServerTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/ServerTask.php',
   'Neutrino\\Foundation\\Cli\\Tasks\\ViewClearTask' => $basePath . 'vendor/nucleon/framework/src/Neutrino/Foundation/Cli/Tasks/ViewClearTask.php',
