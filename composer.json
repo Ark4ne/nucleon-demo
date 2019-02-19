@@ -16,8 +16,8 @@
     }
   ],
   "require": {
-    "php": ">=7.2",
-    "ext-phalcon": ">=3.0",
+    "php": "~7.2",
+    "ext-phalcon": "~3.0",
     "ext-mbstring": "*",
     "ext-openssl": "*",
     "ext-zend-opcache": "*",
@@ -41,7 +41,8 @@
       "Neutrino\\Foundation\\Cli\\Tasks\\ClearCompiledTask::composerClearCompiled"
     ],
     "warmup": [
-      "php quark migrate --force"
+      "php quark migrate --force",
+      "php quark optimize --force"
     ]
   }
 }
