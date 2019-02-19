@@ -9,13 +9,13 @@ class MicroController extends Controller
 
     public function indexAction()
     {
-        $this->response->setStatusCode(200);
-
-        $this->response->setJsonContent([
-          'controller' => __CLASS__,
-          'action' => __FUNCTION__,
-        ]);
-
-        return $this->response;
+        return $this->response
+          ->setStatusCode(200, 'OK')
+          ->setJsonContent([
+            'status' => 'OK',
+            'code' => 200,
+            'controller' => __CLASS__,
+            'action' => __FUNCTION__,
+          ]);
     }
 }
