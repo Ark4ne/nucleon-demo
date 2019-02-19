@@ -41,10 +41,15 @@ class DebugController extends ControllerBase
             public $pub = 'abc';
             protected $pro = 123;
             private $pri;
+            private $pri_ref;
 
             public function __construct()
             {
-                $this->pri = new class{};
+                $this->pri = (object)[
+                  'self' => $this
+                ];
+
+                $this->pri_ref = $this->pri;
             }
         };
         $this->view->setVar('to_dump', $toDump);

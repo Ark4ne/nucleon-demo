@@ -3,7 +3,7 @@
 namespace App\Kernels\Http\Controllers;
 
 /**
- * Class IndexController
+ * Class HomeController
  *
  * @package Controllers
  */

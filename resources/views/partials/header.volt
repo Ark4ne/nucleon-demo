@@ -6,13 +6,13 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right">
         {% if (auth.check()) %}
-          <li><a href="{{ url('/logout') }}">Logout</a></li>
+          <li><a href="{{ url('logout') }}">Logout</a></li>
         {% else %}
           <li {{ uri == '/login' ? 'class="active"' : '' }}>
-            <a href="{{ url('/login') }}">Login</a>
+            <a href="{{ url('login') }}">Login</a>
           </li>
           <li {{ uri == '/register' ? 'class="active"' : '' }}>
-            <a href="{{ url('/register') }}">Register</a>
+            <a href="{{ url('register') }}">Register</a>
           </li>
         {% endif %}
       </ul>
@@ -22,7 +22,7 @@
 
 {% macro liIsActive(_url, _children) %}
   {% set uri = router.getRewriteUri() %}
-  {% if uri === _url %}
+  {% if uri === '/' ~ _url %}
     {% return true %}
   {% elseif _children is empty %}
     {% return false %}
@@ -73,15 +73,15 @@
       </span>
   </li>
   {{ drawLi('Kernel [HTTP]', '#!', [
-    'Home [NoModule]' : ['url' : '/'],
-    'Front [Frontend]' : ['url' : '/index'],
-    'Back [Backend]' : ['url' : '/back/index/index']
+    'Home [NoModule]' : ['url' : ''],
+    'Front [Frontend]' : ['url' : 'index'],
+    'Back [Backend]' : ['url' : 'back/index/index']
   ]) }}
   {{ drawLi('Kernel [Micro]', '#!', [
-    '/api' : ['url' : '/example/api/index']
+    '/api' : ['url' : 'example/api/index']
   ]) }}
   {{ drawLi('Debug', '#!', [
-    'Var dump' : ['url' : '/example/debug/var-dump'],
-    'Exception' : ['url' : '/example/debug/exception']
+    'Var dump' : ['url' : 'example/debug/var-dump'],
+    'Exception' : ['url' : 'example/debug/exception']
   ]) }}
 </ul>

@@ -2,8 +2,8 @@
 
 namespace App\Kernels\Http\Modules\Frontend\Controllers;
 
-use App\Kernels\Http\Modules\Frontend\Middleware\Guest as GuestMiddleware;
-use Neutrino\Support\Facades\Auth;
+use App\Kernels\Http\Middleware\RedirectIfAuthenticated;
+use Neutrino\Http\Middleware\Csrf;
 
 /**
  * Class AuthController
@@ -17,11 +17,12 @@ class AuthController extends ControllerBase
     {
         parent::onConstruct();
 
-        $this->middleware(GuestMiddleware::class)->except(['logout']);
+        $this->middleware(RedirectIfAuthenticated::class)->except(['logout']);
+        $this->middleware(Csrf::class)->only(['postRegister', 'postLogin']);
     }
 
     /**
-     * The Register action.
+     * Register view.
      *
      * url (get) : /register
      */
@@ -31,7 +32,7 @@ class AuthController extends ControllerBase
     }
 
     /**
-     * The Register action.
+     * Register action.
      *
      * url (post) : /register
      */
@@ -97,16 +98,16 @@ class AuthController extends ControllerBase
 
         $this->flashSession->success('User create successful !');
 
-        $this->response->redirect('/index');
+        $this->response->redirect('index');
         $this->view->disable();
 
         return;
     }
 
     /**
-     * The Register action.
+     * Login view.
      *
-     * url (get) : /register
+     * url (get) : /login
      */
     public function loginAction()
     {
@@ -114,9 +115,9 @@ class AuthController extends ControllerBase
     }
 
     /**
-     * The Login action.
+     * Login action.
      *
-     * http://localhost/phalcon-lust/auth/login
+     * url (post) : /login
      */
     public function postLoginAction()
     {
@@ -144,17 +145,22 @@ class AuthController extends ControllerBase
         $this->flashSession->success('Welcome ' . $user->name);
 
         // Forward to the 'invoices' controller if the user is valid
-        $this->response->redirect('/index');
+        $this->response->redirect('index');
         $this->view->disable();
 
         return;
     }
 
+    /**
+     * Logout action.
+     *
+     * url (get) : /logout
+     */
     public function logoutAction()
     {
-        Auth::logout();
+        $this->auth->logout();
 
-        $this->response->redirect('/index');
+        $this->response->redirect('index');
         $this->view->disable();
 
         return;
