@@ -54,6 +54,10 @@ $router->addGet('/api/test', function () {
       ]);
 });
 
+$router->addGet('/api/exception', function () {
+    throw new Exception();
+});
+
 /*
 |--------------------------------------------------------------------------
 | Api - NotFound
