@@ -102,19 +102,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon-nucleon/framework.git",
-                "reference": "6cffc4c71898da8c6043c99217a00d211062408f"
+                "reference": "608dc0b841ef973b4a0c834dffc0427233fc5b0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/6cffc4c71898da8c6043c99217a00d211062408f",
-                "reference": "6cffc4c71898da8c6043c99217a00d211062408f",
+                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/608dc0b841ef973b4a0c834dffc0427233fc5b0b",
+                "reference": "608dc0b841ef973b4a0c834dffc0427233fc5b0b",
                 "shasum": ""
             },
             "require": {
                 "ark4ne/highlight": "dev-master",
-                "ext-phalcon": ">=3.0",
+                "ext-phalcon": "~3.0",
                 "nikic/php-parser": "^3.0",
-                "php": ">=5.6"
+                "php": "5.6 - 7.2"
             },
             "replace": {
                 "neutrino/dotconst": "~1.0",
@@ -148,7 +148,7 @@
                 "nucleon",
                 "phalcon"
             ],
-            "time": "2018-12-03T14:34:13+00:00"
+            "time": "2019-02-19T22:58:25+00:00"
         }
     ],
     "packages-dev": [
