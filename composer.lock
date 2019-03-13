@@ -12,16 +12,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ark4ne/highlight.git",
-                "reference": "96e88c0ede1f446e6bc7a69aa12599884d091df3"
+                "reference": "8bc9c7405d4b4a9343c84eee340f5b66f46ce2dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ark4ne/highlight/zipball/96e88c0ede1f446e6bc7a69aa12599884d091df3",
-                "reference": "96e88c0ede1f446e6bc7a69aa12599884d091df3",
+                "url": "https://api.github.com/repos/Ark4ne/highlight/zipball/8bc9c7405d4b4a9343c84eee340f5b66f46ce2dc",
+                "reference": "8bc9c7405d4b4a9343c84eee340f5b66f46ce2dc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=5.6",
+                "psr/simple-cache": "*"
             },
             "require-dev": {
                 "phpunit/phpunit": "~5.7"
@@ -38,12 +39,12 @@
             ],
             "authors": [
                 {
-                    "name": "Ark4ne",
+                    "name": "Ark4ne (Guillaume Allegret)",
                     "email": "gui.allegret@gmail.com"
                 }
             ],
             "description": "SQL Highlight",
-            "time": "2018-09-25T13:35:21+00:00"
+            "time": "2019-03-12T19:39:57+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -102,12 +103,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon-nucleon/framework.git",
-                "reference": "608dc0b841ef973b4a0c834dffc0427233fc5b0b"
+                "reference": "89ce41f336d0ba9bd4db7d0fbf3609eaad827fb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/608dc0b841ef973b4a0c834dffc0427233fc5b0b",
-                "reference": "608dc0b841ef973b4a0c834dffc0427233fc5b0b",
+                "url": "https://api.github.com/repos/phalcon-nucleon/framework/zipball/89ce41f336d0ba9bd4db7d0fbf3609eaad827fb8",
+                "reference": "89ce41f336d0ba9bd4db7d0fbf3609eaad827fb8",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +149,55 @@
                 "nucleon",
                 "phalcon"
             ],
-            "time": "2019-02-19T22:58:25+00:00"
+            "time": "2019-03-13T00:00:33+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
         }
     ],
     "packages-dev": [
@@ -158,12 +207,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "66b52fbf47a3a9dd623cdc1212677cdfbcc142fe"
+                "reference": "2145e8cd1f6f6a7cef8d4f8c8c4b4e08529e8a8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/66b52fbf47a3a9dd623cdc1212677cdfbcc142fe",
-                "reference": "66b52fbf47a3a9dd623cdc1212677cdfbcc142fe",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/2145e8cd1f6f6a7cef8d4f8c8c4b4e08529e8a8d",
+                "reference": "2145e8cd1f6f6a7cef8d4f8c8c4b4e08529e8a8d",
                 "shasum": ""
             },
             "require": {
@@ -174,7 +223,8 @@
                 "ext-pdo": "*",
                 "ext-phar": "*",
                 "phpbench/phpbench": "^0.13",
-                "phpstan/phpstan-shim": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
                 "phpunit/phpunit": "^7.0"
             },
             "type": "library",
@@ -205,7 +255,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2019-02-11T09:44:09+00:00"
+            "time": "2019-03-12T22:46:11+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -264,12 +314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "be9bf28d8e57d67883cba9fcadfcff8caab667f8"
+                "reference": "9a2306a335dbb827401a199e68e10c1937e9d068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/be9bf28d8e57d67883cba9fcadfcff8caab667f8",
-                "reference": "be9bf28d8e57d67883cba9fcadfcff8caab667f8",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/9a2306a335dbb827401a199e68e10c1937e9d068",
+                "reference": "9a2306a335dbb827401a199e68e10c1937e9d068",
                 "shasum": ""
             },
             "require": {
@@ -321,7 +371,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2019-02-12T16:07:13+00:00"
+            "time": "2019-03-08T09:21:57+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1583,7 +1633,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -1602,12 +1652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "9744e5991d1436620c3d01b507160b31803546f3"
+                "reference": "2fb37042c7060535dbe08a5d61a550e5d181f3c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/9744e5991d1436620c3d01b507160b31803546f3",
-                "reference": "9744e5991d1436620c3d01b507160b31803546f3",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/2fb37042c7060535dbe08a5d61a550e5d181f3c7",
+                "reference": "2fb37042c7060535dbe08a5d61a550e5d181f3c7",
                 "shasum": ""
             },
             "require": {
@@ -1653,7 +1703,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-25T20:45:15+00:00"
+            "time": "2019-02-23T15:22:31+00:00"
         },
         {
             "name": "webmozart/assert",
